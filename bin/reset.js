@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const phrases = require('../phrases');
-const PHRASES_PATH = path.resolve(__dirname, '/../phrases.json');
+
+const phrases = require('../phrases.json');
+const PHRASES_PATH = path.resolve(__dirname) + '/../phrases.json';
 
 const main = () => {
   const emptyPhrases = {
