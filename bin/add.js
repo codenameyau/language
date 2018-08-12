@@ -31,7 +31,8 @@ const main = () => {
       ]
     };
 
-    console.log(newPhrases);
+    const stream = fs.createWriteStream(PHRASES_PATH);
+    stream.write(JSON.stringify(newPhrase, null, 2));
   });
 };
 
