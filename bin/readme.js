@@ -6,7 +6,7 @@ const languages = require('./languages').languages;
 const order = require('./languages').order;
 const phrases = require('../phrases.json');
 
-const createReadme = () => {
+const main = () => {
   const stream = fs.createWriteStream(README_PATH);
 
   stream.once('open', () => {
@@ -24,4 +24,4 @@ const createReadme = () => {
   });
 };
 
-createReadme();
+require.main === module && main();

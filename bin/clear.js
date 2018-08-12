@@ -14,4 +14,4 @@ const main = () => {
   stream.write(JSON.stringify(emptyPhrases, null, 2));
 };
 
-main();
+require.main === module && main();

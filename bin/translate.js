@@ -29,11 +29,11 @@ const translateToLanguages = exports.translateToLanguages = (phrase) => {
   });
 };
 
-const main = (phrase) => {
-  translateToLanguages(phrase).then((translations) => {
+const main = () => {
+  const phrase = process.argv[2];
+  phrase && translateToLanguages(phrase).then((translations) => {
     console.log(JSON.stringify(translations, null, 2));
   });
 };
 
-const phrase = process.argv[2];
-phrase && main(phrase);
+require.main === module && main();
