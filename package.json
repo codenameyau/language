@@ -1,22 +1,30 @@
 {
   "name": "language",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learning languages one phrase at a time",
   "main": "index.js",
   "scripts": {
+    "test": "jest test",
     "readme": "node bin/readme.js",
-    "add": "node bin/translate.js",
     "translate": "node bin/translate.js",
-    "t": "node bin/translate.js"
+    "add": "node bin/add.js",
+    "reset": "node bin/reset.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codenameyau/language.git"
   },
-  "author": "",
+  "author": "Jorge Yau <codenameyau@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codenameyau/language/issues"
   },
-  "homepage": "https://github.com/codenameyau/language#readme"
+  "homepage": "https://github.com/codenameyau/language#readme",
+  "dependencies": {
+    "google-translate-api": "^2.3.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  }
 }
