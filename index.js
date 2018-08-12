@@ -15,11 +15,15 @@ const LANG_MAP = {
   ja: {
     name: 'Japanese',
   },
+  es: {
+    name: 'Spanish',
+  },
 };
 
 const LANG_ORDER = [
   'zh',
   'ja',
+  'es',
 ];
 
 const createReadme = () => {
@@ -31,8 +35,8 @@ const createReadme = () => {
 
       LANG_ORDER.map((lang_code) => {
         const lang_name = LANG_MAP[lang_code].name;
-        stream.write(`\n${lang_name}:`)
-        stream.write(`\n- ${phrase[lang_code]}`)
+        const lang_phrase = phrase[lang_code];
+        lang_phrase && stream.write(`\n- **${lang_name}:** ${lang_phrase}`)
       });
 
       stream.write('\n');
