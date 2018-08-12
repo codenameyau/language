@@ -5,8 +5,7 @@ const languages = require('./languages').languages;
 const order = require('./languages').order;
 const phrases = require('../phrases.json');
 
-const CURRENT_DIR = path.resolve(__dirname);
-const README_PATH = CURRENT_DIR + '/README.md';
+const README_PATH = path.resolve(__dirname) + '/../README.md';
 
 const createReadme = () => {
   const stream = fs.createWriteStream(README_PATH);
