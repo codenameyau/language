@@ -31,7 +31,7 @@ const translateToLanguages = exports.translateToLanguages = (phrase) => {
 
 const main = (phrase) => {
   translateToLanguages(phrase).then((translations) => {
-    console.log(translations);
+    console.log(JSON.stringify(translations, null, 2));
   });
 };
 
