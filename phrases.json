@@ -11,6 +11,24 @@
       "zh": "Wǒ jīntiān yào qù shàngbān",
       "ja": "Watashi wa kyō hataraku tsumoridesu",
       "es": "Voy a trabajar hoy"
+    },
+    {
+      "en": "I'm going home",
+      "zh": "Wǒ yào huí jiāle",
+      "ja": "Watashi wa ie ni iku yo",
+      "es": "Me voy a casa"
+    },
+    {
+      "en": "I'm going home now",
+      "zh": "Wǒ zhèngzài huí jiā",
+      "ja": "Mō kaeru ne",
+      "es": "Voy a casa ahora"
+    },
+    {
+      "en": "I'm going home tomorrow",
+      "zh": "Wǒ míngtiān yào huí jiāle",
+      "ja": "Ashita ienikaeru yo",
+      "es": "Me voy a casa mañana"
     }
   ]
 }
