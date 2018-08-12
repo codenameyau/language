@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "readme": "node bin/readme.js",
+    "add": "node bin/translate.js",
+    "translate": "node bin/translate.js",
+    "t": "node bin/translate.js"
   },
   "repository": {
     "type": "git",

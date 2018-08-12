@@ -1,4 +1,4 @@
-module.exports = {
+exports.languages = {
   en: {
     name: 'English',
   },
@@ -12,3 +12,9 @@ module.exports = {
     name: 'Spanish',
   },
 };
+
+exports.order = [
+  'zh',
+  'ja',
+  'es',
+]
