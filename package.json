@@ -8,7 +8,7 @@
     "readme": "node bin/readme.js",
     "translate": "node bin/translate.js",
     "add": "node bin/add.js",
-    "reset": "node bin/reset.js"
+    "clear": "node bin/clear.js"
   },
   "repository": {
     "type": "git",
