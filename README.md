@@ -1,25 +1,25 @@
 
 ### I'll come home next week
-- **Chinese:** Wǒ xià zhōu huí jiā
-- **Japanese:** Raishū kaeru yo
-- **Spanish:** Volveré a casa la próxima semana
+- [Chinese](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'll%20come%20home%20next%20week): Wǒ xià zhōu huí jiā
+- [Japanese](https://translate.google.com/?tl=ja#en/ja/I'll%20come%20home%20next%20week): Raishū kaeru yo
+- [Spanish](https://translate.google.com/?tl=es#en/es/I'll%20come%20home%20next%20week): Volveré a casa la próxima semana
 
 ### I'm going to work today
-- **Chinese:** Wǒ jīntiān yào qù shàngbān
-- **Japanese:** Watashi wa kyō hataraku tsumoridesu
-- **Spanish:** Voy a trabajar hoy
+- [Chinese](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20to%20work%20today): Wǒ jīntiān yào qù shàngbān
+- [Japanese](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20to%20work%20today): Watashi wa kyō hataraku tsumoridesu
+- [Spanish](https://translate.google.com/?tl=es#en/es/I'm%20going%20to%20work%20today): Voy a trabajar hoy
 
 ### I'm going home
-- **Chinese:** Wǒ yào huí jiāle
-- **Japanese:** Watashi wa ie ni iku yo
-- **Spanish:** Me voy a casa
+- [Chinese](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home): Wǒ yào huí jiāle
+- [Japanese](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home): Watashi wa ie ni iku yo
+- [Spanish](https://translate.google.com/?tl=es#en/es/I'm%20going%20home): Me voy a casa
 
 ### I'm going home now
-- **Chinese:** Wǒ zhèngzài huí jiā
-- **Japanese:** Mō kaeru ne
-- **Spanish:** Voy a casa ahora
+- [Chinese](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20now): Wǒ zhèngzài huí jiā
+- [Japanese](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20now): Mō kaeru ne
+- [Spanish](https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20now): Voy a casa ahora
 
 ### I'm going home tomorrow
-- **Chinese:** Wǒ míngtiān yào huí jiāle
-- **Japanese:** Ashita ienikaeru yo
-- **Spanish:** Me voy a casa mañana
+- [Chinese](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20tomorrow): Wǒ míngtiān yào huí jiāle
+- [Japanese](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20tomorrow): Ashita ienikaeru yo
+- [Spanish](https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20tomorrow): Me voy a casa mañana
