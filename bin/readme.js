@@ -13,7 +13,7 @@ const googleTranslateUrl = (phrase, langFrom, langTo = 'en') => {
 }
 
 const markdownUrl = (text, url) => {
-  return `<a href="${url}" target="_blank">${text}</a>`;
+  return `[${text}{:target="_blank"}](${url})`;
 };
 
 const main = () => {
