@@ -1,12 +1,6 @@
 {
   "phrases": [
     {
-      "en": "I'll come home next week",
-      "zh": "Wǒ xià zhōu huí jiā",
-      "ja": "Raishū kaeru yo",
-      "es": "Volveré a casa la próxima semana"
-    },
-    {
       "en": "I'm going to work today",
       "zh": "Wǒ jīntiān yào qù shàngbān",
       "ja": "Watashi wa kyō hataraku tsumoridesu",
@@ -29,6 +23,12 @@
       "zh": "Wǒ míngtiān yào huí jiāle",
       "ja": "Ashita ienikaeru yo",
       "es": "Me voy a casa mañana"
+    },
+    {
+      "en": "I'll come home next week",
+      "zh": "Wǒ xià zhōu huí jiā",
+      "ja": "Raishū kaeru yo",
+      "es": "Volveré a casa la próxima semana"
     }
   ]
 }

@@ -29,7 +29,7 @@ const main = () => {
         const languagePhrase = phrase[lang_code];
         const url = googleTranslateUrl(phrase.en, language.translate_code);
         const markdown = markdownUrl(languagePhrase, url)
-        languagePhrase && stream.write(`\n- ${language.name}: ${markdown}`)
+        languagePhrase && stream.write(`\n- **${language.name}**: ${markdown}`)
       });
 
       stream.write('\n');
