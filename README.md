@@ -1,25 +1,25 @@
 
 ### I'll come home next week
-- <a href="https://translate.google.com/?tl=zh-CN#en/zh-CN/I'll%20come%20home%20next%20week" target="_blank">Chinese</a>: Wǒ xià zhōu huí jiā
-- <a href="https://translate.google.com/?tl=ja#en/ja/I'll%20come%20home%20next%20week" target="_blank">Japanese</a>: Raishū kaeru yo
-- <a href="https://translate.google.com/?tl=es#en/es/I'll%20come%20home%20next%20week" target="_blank">Spanish</a>: Volveré a casa la próxima semana
+- Chinese: [Wǒ xià zhōu huí jiā](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'll%20come%20home%20next%20week)
+- Japanese: [Raishū kaeru yo](https://translate.google.com/?tl=ja#en/ja/I'll%20come%20home%20next%20week)
+- Spanish: [Volveré a casa la próxima semana](https://translate.google.com/?tl=es#en/es/I'll%20come%20home%20next%20week)
 
 ### I'm going to work today
-- <a href="https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20to%20work%20today" target="_blank">Chinese</a>: Wǒ jīntiān yào qù shàngbān
-- <a href="https://translate.google.com/?tl=ja#en/ja/I'm%20going%20to%20work%20today" target="_blank">Japanese</a>: Watashi wa kyō hataraku tsumoridesu
-- <a href="https://translate.google.com/?tl=es#en/es/I'm%20going%20to%20work%20today" target="_blank">Spanish</a>: Voy a trabajar hoy
+- Chinese: [Wǒ jīntiān yào qù shàngbān](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20to%20work%20today)
+- Japanese: [Watashi wa kyō hataraku tsumoridesu](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20to%20work%20today)
+- Spanish: [Voy a trabajar hoy](https://translate.google.com/?tl=es#en/es/I'm%20going%20to%20work%20today)
 
 ### I'm going home
-- <a href="https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home" target="_blank">Chinese</a>: Wǒ yào huí jiāle
-- <a href="https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home" target="_blank">Japanese</a>: Watashi wa ie ni iku yo
-- <a href="https://translate.google.com/?tl=es#en/es/I'm%20going%20home" target="_blank">Spanish</a>: Me voy a casa
+- Chinese: [Wǒ yào huí jiāle](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home)
+- Japanese: [Watashi wa ie ni iku yo](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home)
+- Spanish: [Me voy a casa](https://translate.google.com/?tl=es#en/es/I'm%20going%20home)
 
 ### I'm going home now
-- <a href="https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20now" target="_blank">Chinese</a>: Wǒ zhèngzài huí jiā
-- <a href="https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20now" target="_blank">Japanese</a>: Mō kaeru ne
-- <a href="https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20now" target="_blank">Spanish</a>: Voy a casa ahora
+- Chinese: [Wǒ zhèngzài huí jiā](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20now)
+- Japanese: [Mō kaeru ne](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20now)
+- Spanish: [Voy a casa ahora](https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20now)
 
 ### I'm going home tomorrow
-- <a href="https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20tomorrow" target="_blank">Chinese</a>: Wǒ míngtiān yào huí jiāle
-- <a href="https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20tomorrow" target="_blank">Japanese</a>: Ashita ienikaeru yo
-- <a href="https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20tomorrow" target="_blank">Spanish</a>: Me voy a casa mañana
+- Chinese: [Wǒ míngtiān yào huí jiāle](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'm%20going%20home%20tomorrow)
+- Japanese: [Ashita ienikaeru yo](https://translate.google.com/?tl=ja#en/ja/I'm%20going%20home%20tomorrow)
+- Spanish: [Me voy a casa mañana](https://translate.google.com/?tl=es#en/es/I'm%20going%20home%20tomorrow)
