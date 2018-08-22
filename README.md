@@ -1,4 +1,9 @@
 
+### Let's go to a restaurant tonight
+- Chinese: [Wǒmen jīn wǎn qù cānguǎn ba](https://translate.google.com/?tl=zh-CN#en/zh-CN/Let's%20go%20to%20a%20restaurant%20tonight)
+- Japanese: [Kon'ya resutoran ni ikimashou](https://translate.google.com/?tl=ja#en/ja/Let's%20go%20to%20a%20restaurant%20tonight)
+- Spanish: [Vamos a un restaurante esta noche](https://translate.google.com/?tl=es#en/es/Let's%20go%20to%20a%20restaurant%20tonight)
+
 ### Let's go to the grocery store
 - Chinese: [Wǒmen qù záhuò diàn ba](https://translate.google.com/?tl=zh-CN#en/zh-CN/Let's%20go%20to%20the%20grocery%20store)
 - Japanese: [Shokuryōhin-ten ni ikimashou](https://translate.google.com/?tl=ja#en/ja/Let's%20go%20to%20the%20grocery%20store)
