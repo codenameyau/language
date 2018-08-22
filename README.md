@@ -23,3 +23,8 @@
 - Chinese: [Wǒ xià zhōu huí jiā](https://translate.google.com/?tl=zh-CN#en/zh-CN/I'll%20come%20home%20next%20week)
 - Japanese: [Raishū kaeru yo](https://translate.google.com/?tl=ja#en/ja/I'll%20come%20home%20next%20week)
 - Spanish: [Volveré a casa la próxima semana](https://translate.google.com/?tl=es#en/es/I'll%20come%20home%20next%20week)
+
+### When are you coming home
+- Chinese: [Nǐ shénme shíhòu huí jiā](https://translate.google.com/?tl=zh-CN#en/zh-CN/When%20are%20you%20coming%20home)
+- Japanese: [Anata wa itsu-ka ni kaerimasu ka](https://translate.google.com/?tl=ja#en/ja/When%20are%20you%20coming%20home)
+- Spanish: [Cuando vendrás a casa](https://translate.google.com/?tl=es#en/es/When%20are%20you%20coming%20home)
