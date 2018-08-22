@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const readme = require('./readme');
 const translateToLanguages = require('./translate').translateToLanguages;
 const phrases = require('../phrases.json');
 const PHRASES_PATH = path.resolve(__dirname) + '/../phrases.json';
@@ -38,9 +37,7 @@ const addPhrase = exports.addPhrase = (phrase) => {
 
 const main = () => {
   const phrase = process.argv[2];
-  phrase && addPhrase(phrase).then(() => {
-    readme();
-  });
+  phrase && addPhrase(phrase);
 };
 
 require.main === module && main();
