@@ -28,3 +28,8 @@
 - Chinese: [Nǐ shénme shíhòu huí jiā](https://translate.google.com/?tl=zh-CN#en/zh-CN/When%20are%20you%20coming%20home)
 - Japanese: [Anata wa itsu-ka ni kaerimasu ka](https://translate.google.com/?tl=ja#en/ja/When%20are%20you%20coming%20home)
 - Spanish: [Cuando vendrás a casa](https://translate.google.com/?tl=es#en/es/When%20are%20you%20coming%20home)
+
+### Can you go to buy food
+- Chinese: [Nǐ néng qù mǎi cài ma?](https://translate.google.com/?tl=zh-CN#en/zh-CN/Can%20you%20go%20to%20buy%20food)
+- Japanese: [Tabemono o kau koto ga dekimasu ka?](https://translate.google.com/?tl=ja#en/ja/Can%20you%20go%20to%20buy%20food)
+- Spanish: [¿Puedes ir a comprar comida](https://translate.google.com/?tl=es#en/es/Can%20you%20go%20to%20buy%20food)
