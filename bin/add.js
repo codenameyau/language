@@ -18,10 +18,8 @@ const reduceTranslations = exports.reduceTranslations = (phrase, translations) =
   return newPhrase;
 };
 
-const main = () => {
-  const phrase = process.argv[2];
-
-  phrase && translateToLanguages(phrase).then((translations) => {
+const addPhrase = exports.addPhrase = (phrase) => {
+  return translateToLanguages(phrase).then((translations) => {
     const newPhrase = reduceTranslations(phrase, translations);
 
     const newPhrases = {
@@ -35,6 +33,12 @@ const main = () => {
     const stream = fs.createWriteStream(PHRASES_PATH);
     stream.write(JSON.stringify(newPhrases, null, 2));
     stream.write('\n');
+  });
+};
+
+const main = () => {
+  const phrase = process.argv[2];
+  phrase && addPhrase(phrase).then(() => {
     readme();
   });
 };
