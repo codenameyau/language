@@ -26,8 +26,8 @@ const main = () => {
     const newPhrases = {
       ...phrases,
       phrases: [
+        newPhrase,
         ...phrases.phrases,
-        newPhrase
       ]
     };
 
