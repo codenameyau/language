@@ -38,3 +38,4 @@ const main = () => {
 };
 
 require.main === module && main();
+module.exports = main;

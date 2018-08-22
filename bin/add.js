@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const readme = require('./readme');
 const translateToLanguages = require('./translate').translateToLanguages;
 const phrases = require('../phrases.json');
 const PHRASES_PATH = path.resolve(__dirname) + '/../phrases.json';
@@ -34,6 +35,7 @@ const main = () => {
     const stream = fs.createWriteStream(PHRASES_PATH);
     stream.write(JSON.stringify(newPhrases, null, 2));
     stream.write('\n');
+    readme();
   });
 };
 

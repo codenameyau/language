@@ -1,6 +1,24 @@
 {
   "phrases": [
     {
+      "en": "Let's go to the grocery store",
+      "zh": "Wǒmen qù záhuò diàn ba",
+      "ja": "Shokuryōhin-ten ni ikimashou",
+      "es": "Vamos a la tienda de comestibles"
+    },
+    {
+      "en": "Can you go to buy food",
+      "zh": "Nǐ néng qù mǎi cài ma?",
+      "ja": "Tabemono o kau koto ga dekimasu ka?",
+      "es": "¿Puedes ir a comprar comida"
+    },
+    {
+      "en": "When are you coming home",
+      "zh": "Nǐ shénme shíhòu huí jiā",
+      "ja": "Anata wa itsu-ka ni kaerimasu ka",
+      "es": "Cuando vendrás a casa"
+    },
+    {
       "en": "I'm going to work today",
       "zh": "Wǒ jīntiān yào qù shàngbān",
       "ja": "Watashi wa kyō hataraku tsumoridesu",
@@ -29,18 +47,6 @@
       "zh": "Wǒ xià zhōu huí jiā",
       "ja": "Raishū kaeru yo",
       "es": "Volveré a casa la próxima semana"
-    },
-    {
-      "en": "When are you coming home",
-      "zh": "Nǐ shénme shíhòu huí jiā",
-      "ja": "Anata wa itsu-ka ni kaerimasu ka",
-      "es": "Cuando vendrás a casa"
-    },
-    {
-      "en": "Can you go to buy food",
-      "zh": "Nǐ néng qù mǎi cài ma?",
-      "ja": "Tabemono o kau koto ga dekimasu ka?",
-      "es": "¿Puedes ir a comprar comida"
     }
   ]
 }
