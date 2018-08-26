@@ -1,4 +1,9 @@
 
+### when is your birthday
+- Chinese: [Nǐ de shēngrì shì shénme shíhòu](https://translate.google.com/?tl=zh-CN#en/zh-CN/when%20is%20your%20birthday)
+- Japanese: [Anata no tanjōbi wa itsudesu ka](https://translate.google.com/?tl=ja#en/ja/when%20is%20your%20birthday)
+- Spanish: [cuando es tu cumpleaños](https://translate.google.com/?tl=es#en/es/when%20is%20your%20birthday)
+
 ### Let's go to a restaurant tonight
 - Chinese: [Wǒmen jīn wǎn qù cānguǎn ba](https://translate.google.com/?tl=zh-CN#en/zh-CN/Let's%20go%20to%20a%20restaurant%20tonight)
 - Japanese: [Kon'ya resutoran ni ikimashou](https://translate.google.com/?tl=ja#en/ja/Let's%20go%20to%20a%20restaurant%20tonight)
