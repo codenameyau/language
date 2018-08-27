@@ -1,20 +1,19 @@
 const translate = require('google-translate-api');
-const languages = require('./languages').languages;
-const order = require('./languages').order;
+const languages = require('../languages');
 
 const parseRomization = exports.parseRomization = (res) => {
   return (res.raw && JSON.parse(res.raw)[0][1][2]) || '';
 };
 
 const translatePhrase = exports.translatedPhrase = (phrase, languageCode) => {
-  const language = languages[languageCode];
+  const language = languages.languages[languageCode];
   const api_code = language.api_code;
   const useRaw = language.romanize;
   return translate(phrase, { to: api_code, raw: useRaw });
 };
 
 const translateToLanguages = exports.translateToLanguages = (phrase) => {
-  const promises = order.map((languageCode) => {
+  const promises = languages.order.map((languageCode) => {
     return translatePhrase(phrase, languageCode).then((res) => {
       return {
         language: languageCode,

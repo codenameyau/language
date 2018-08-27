@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const README_PATH = path.resolve(__dirname) + '/../README.md';
 
-const languages = require('./languages').languages;
-const order = require('./languages').order;
+const languages = require('../languages');
 const phrases = require('../phrases.json');
 
 const googleTranslateUrl = (phrase, langFrom, langTo = 'en') => {
@@ -24,8 +23,8 @@ const main = () => {
     phrases.phrases.map((phrase) => {
       stream.write(`\n### ${phrase.en}`);
 
-      order.map((lang_code) => {
-        const language = languages[lang_code];
+      languages.order.map((lang_code) => {
+        const language = languages.languages[lang_code];
         const languagePhrase = phrase[lang_code];
         const url = googleTranslateUrl(phrase.en, language.translate_code);
         const markdown = markdownUrl(languagePhrase, url)
