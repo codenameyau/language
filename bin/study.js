@@ -2,6 +2,7 @@ const readline = require('readline');
 const phrases = require('../phrases.json').phrases;
 const romanize = require('../src/romanize').romanize;
 const shuffle = require('../src/utils').shuffle;
+const languages = require('../languages').languages;
 
 const match = (phrase, answer) => {
   return (
@@ -10,14 +11,29 @@ const match = (phrase, answer) => {
   )
 };
 
+const showResults = () => {
+  console.log('\n\n  Goodbye!');
+};
+
 const study = exports.study = (count = 1) => {
+  const reader = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  reader.on('SIGINT', () => {
+    showResults();
+    reader.close();
+  });
+
   const shuffledPhrases = phrases.slice(0, count);
 
   const questions = shuffle(shuffledPhrases.reduce((acc, phrase) => {
     const otherQuestions = (
       Object.keys(phrase).filter((lang) => lang !== 'en').map((lang) => {
         return {
-          language: lang,
+          lang: lang,
+          language: languages[lang].name,
           phrase: phrase[lang],
           english: phrase.en
         }
@@ -30,43 +46,22 @@ const study = exports.study = (count = 1) => {
     ]
   }, []));
 
-  console.log(questions);
-  return;
-
-  const reader = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  const askQuestion = (phrase, language, index) => {
+  const askQuestion = (completeCB, index) => {
     if (index >= shuffledPhrases.length) {
-      return;
+      return completeCB();
     }
 
-    const question = `  ${phrase.en}\n  (${language}) > `;
+    const phrase = questions[index];
+    const question = `\n  ${phrase.english}\n  (${phrase.language}) > `;
     reader.question(question, (answer) => {
-      askQuestion()
-      console.log('answer', answer);
+      askQuestion(completeCB, index+1)
     });
   };
 
-  // console.log(promises[0]());
-
-  // const phrase = shuffledPhrases[0];
-  // const promise = phrasePromise(phrase, 'zh');
-
-  // for (let i=0; i<count; i++) {
-  //   const phrase = shuffledPhrases[i];
-  //   const languages = Object.keys(phrase).filter((lang) => lang !== 'en');
-  //   console.log(`  ${phrase.en}\n`);
-  //   languages.forEach((language) => {
-  //     const question = `  (${language}) > `;
-  //     reader.question(question, (answer) => {
-  //       console.log(answer);
-  //     });
-  //   });
-  // }
-
+  askQuestion(() => {
+    console.log('done')
+    reader.close();
+  }, 0);
 };
 
 const main = () => {
