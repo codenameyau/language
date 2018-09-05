@@ -1,6 +1,5 @@
 const readline = require('readline');
 const phrases = require('../phrases.json').phrases;
-const randomInt = require('../src/utils').randomInt;
 const romanize = require('../src/romanize').romanize;
 const shuffle = require('../src/utils').shuffle;
 
@@ -12,27 +11,46 @@ const match = (phrase, answer) => {
 };
 
 const study = exports.study = (count = 1) => {
-  const shuffledPhrases = shuffle(phrases);
+  const shuffledPhrases = phrases.slice(0, count);
+
+  const questions = shuffle(shuffledPhrases.reduce((acc, phrase) => {
+    const otherQuestions = (
+      Object.keys(phrase).filter((lang) => lang !== 'en').map((lang) => {
+        return {
+          language: lang,
+          phrase: phrase[lang],
+          english: phrase.en
+        }
+      })
+    );
+
+    return [
+      ...acc,
+      ...otherQuestions
+    ]
+  }, []));
+
+  console.log(questions);
+  return;
+
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
-  const phrasePromise = async (phrase, language) => {
-    return new Promise((resolve, reject) => {
-      const question = `  ${phrase.en}\n  (${language}) > `;
-      reader.clearLine();
-      reader.question(question, (answer) => {
-        resolve(answer);
-      });
+  const askQuestion = (phrase, language, index) => {
+    if (index >= shuffledPhrases.length) {
+      return;
+    }
+
+    const question = `  ${phrase.en}\n  (${language}) > `;
+    reader.question(question, (answer) => {
+      askQuestion()
+      console.log('answer', answer);
     });
   };
 
-  const promises = shuffledPhrases.slice(0, count).map((phrase) => {
-    return phrasePromise(phrase, 'zh');
-  });
-
-  console.log(promises);
+  // console.log(promises[0]());
 
   // const phrase = shuffledPhrases[0];
   // const promise = phrasePromise(phrase, 'zh');
