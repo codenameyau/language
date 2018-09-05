@@ -3,15 +3,15 @@ const phrases = require('../phrases.json').phrases;
 const romanize = require('../src/romanize').romanize;
 const shuffle = require('../src/utils').shuffle;
 const languages = require('../languages').languages;
+const colors = require('../src/colors');
 
 const match = (phrase, answer) => {
-  return (
-    romanize(phrase.toLowerCase()) ===
-    romanize(answer.toLowerCase())
-  )
+  const cleanPhrase = romanize(phrase.toLowerCase());
+  const cleanAnswer = romanize(answer.toLowerCase());
+  return cleanPhrase === cleanAnswer;
 };
 
-const showResults = () => {
+const showResults = (questions) => {
   console.log('\n\n  Goodbye!');
 };
 
@@ -19,11 +19,6 @@ const study = exports.study = (count = 1) => {
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-  });
-
-  reader.on('SIGINT', () => {
-    showResults();
-    reader.close();
   });
 
   const shuffledPhrases = phrases.slice(0, count);
@@ -35,7 +30,7 @@ const study = exports.study = (count = 1) => {
           lang: lang,
           language: languages[lang].name,
           phrase: phrase[lang],
-          english: phrase.en
+          question: phrase.en
         }
       })
     );
@@ -47,19 +42,34 @@ const study = exports.study = (count = 1) => {
   }, []));
 
   const askQuestion = (completeCB, index) => {
-    if (index >= shuffledPhrases.length) {
+    if (index >= questions.length) {
       return completeCB();
     }
 
     const phrase = questions[index];
-    const question = `\n  ${phrase.english}\n  (${phrase.language}) > `;
+    const question = `\n  [${phrase.language}] ${phrase.question} \n  > `;
+
     reader.question(question, (answer) => {
+      phrase.answer = answer;
+      phrase.match = match(phrase.question, answer);
+
+      if (phrase.match) {
+        console.log(colors.fg.green, ` ✔️ ${phrase.phrase}`, colors.reset);
+      } else {
+        console.log(colors.fg.red, ` ❌ ${phrase.phrase}`, colors.reset);
+      }
+
       askQuestion(completeCB, index+1)
     });
   };
 
+  reader.on('SIGINT', () => {
+    showResults(questions);
+    reader.close();
+  });
+
   askQuestion(() => {
-    console.log('done')
+    showResults(questions);
     reader.close();
   }, 0);
 };
