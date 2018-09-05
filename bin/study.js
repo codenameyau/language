@@ -11,8 +11,29 @@ const match = (phrase, answer) => {
   return cleanPhrase === cleanAnswer;
 };
 
+const FEEDBACK = [
+  {
+    color: colors.fg.red,
+    text: "Is that the best you can do?",
+  },
+  {
+    color: colors.fg.red,
+    text: "Is that the best you can do?",
+  },
+];
+
 const showResults = (questions) => {
-  console.log('\n\n  Goodbye!');
+  const correct = questions.reduce((acc, question) => {
+    return acc += question.match;
+  }, 0);
+
+  const percent = correct / questions.length;
+  const feedback = FEEDBACK[Math.floor(percent * 10)];
+
+  console.log(`\n  ------------------`);
+  console.log(`  Correct: ${correct} / ${questions.length}`);
+  console.log(`  ------------------`);
+  console.log(feedback.color, `\n  ${feedback.text}`, colors.reset);
 };
 
 const study = exports.study = (count = 1) => {
@@ -51,7 +72,7 @@ const study = exports.study = (count = 1) => {
 
     reader.question(question, (answer) => {
       phrase.answer = answer;
-      phrase.match = match(phrase.question, answer);
+      phrase.match = match(phrase.phrase, answer);
 
       if (phrase.match) {
         console.log(colors.fg.green, ` ✔️ ${phrase.phrase}`, colors.reset);
