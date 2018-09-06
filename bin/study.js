@@ -5,22 +5,12 @@ const shuffle = require('../src/utils').shuffle;
 const languages = require('../languages').languages;
 const colors = require('../src/colors');
 
+// TODO: implement levishtein distance
 const match = (phrase, answer) => {
   const cleanPhrase = romanize(phrase.toLowerCase());
   const cleanAnswer = romanize(answer.toLowerCase());
   return cleanPhrase === cleanAnswer;
 };
-
-const FEEDBACK = [
-  {
-    color: colors.fg.red,
-    text: "Is that the best you can do?",
-  },
-  {
-    color: colors.fg.red,
-    text: "Is that the best you can do?",
-  },
-];
 
 const showResults = (questions) => {
   const correct = questions.reduce((acc, question) => {
@@ -28,12 +18,10 @@ const showResults = (questions) => {
   }, 0);
 
   const percent = correct / questions.length;
-  const feedback = FEEDBACK[Math.floor(percent * 10)];
 
   console.log(`\n  ------------------`);
   console.log(`  Correct: ${correct} / ${questions.length}`);
   console.log(`  ------------------`);
-  console.log(feedback.color, `\n  ${feedback.text}`, colors.reset);
 };
 
 const study = exports.study = (count = 1) => {
@@ -42,9 +30,7 @@ const study = exports.study = (count = 1) => {
     output: process.stdout
   });
 
-  const shuffledPhrases = phrases.slice(0, count);
-
-  const questions = shuffle(shuffledPhrases.reduce((acc, phrase) => {
+  const questions = shuffle(phrases.reduce((acc, phrase) => {
     const otherQuestions = (
       Object.keys(phrase).filter((lang) => lang !== 'en').map((lang) => {
         return {
@@ -60,7 +46,7 @@ const study = exports.study = (count = 1) => {
       ...acc,
       ...otherQuestions
     ]
-  }, []));
+  }, [])).slice(0, count);
 
   const askQuestion = (completeCB, index) => {
     if (index >= questions.length) {
