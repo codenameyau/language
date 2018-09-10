@@ -20,11 +20,11 @@ const showResults = (questions) => {
   const percent = correct / questions.length;
 
   console.log(`\n  ------------------`);
-  console.log(`  Correct: ${correct} / ${questions.length}`);
+  console.log(`  Correct! ${correct} / ${questions.length}`);
   console.log(`  ------------------`);
 };
 
-const study = exports.study = (count = 1) => {
+const study = exports.study = (count = 1, language) => {
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -32,7 +32,9 @@ const study = exports.study = (count = 1) => {
 
   const questions = shuffle(phrases.reduce((acc, phrase) => {
     const otherQuestions = (
-      Object.keys(phrase).filter((lang) => lang !== 'en').map((lang) => {
+      Object.keys(phrase).filter((lang) => {
+        return (lang !== 'en') && (!language || lang === language)
+      }).map((lang) => {
         return {
           lang: lang,
           language: languages[lang].name,
@@ -83,7 +85,8 @@ const study = exports.study = (count = 1) => {
 
 const main = () => {
   const count = Math.floor(process.argv[2]) || 1;
-  study(count);
+  const language = process.argv[3];
+  study(count, language);
 };
 
 require.main === module && main();

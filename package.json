@@ -9,7 +9,8 @@
     "translate": "node bin/translate.js",
     "add": "node bin/add.js",
     "clear": "node bin/clear.js",
-    "study": "node bin/study.js"
+    "study": "node bin/study.js",
+    "study-chinese": "node bin/study.js 5 zh"
   },
   "repository": {
     "type": "git",
