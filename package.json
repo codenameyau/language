@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/codenameyau/language#readme",
   "dependencies": {
-    "google-translate-api": "^2.3.0"
+    "@vitalets/google-translate-api": "^2.8.0"
   },
   "jest": {
     "verbose": true,
