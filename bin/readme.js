@@ -1,9 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const README_PATH = path.resolve(__dirname) + '/../README.md';
+import fs from 'fs';
+import path from 'path';
 
-const languages = require('../languages');
-const phrases = require('../phrases.json');
+import config from '../config';
+import phrases from '../phrases.json';
+
+const README_PATH = path.resolve(__dirname) + '/../README.md';
 
 const googleTranslateUrl = (phrase, langFrom, langTo = 'en') => {
   return (
@@ -16,15 +17,15 @@ const markdownUrl = (text, url) => {
   return `[${text}](${url})`;
 };
 
-const main = () => {
+export default main = () => {
   const stream = fs.createWriteStream(README_PATH);
 
   stream.once('open', () => {
     phrases.phrases.map((phrase) => {
       stream.write(`\n### ${phrase.en}`);
 
-      languages.order.map((lang_code) => {
-        const language = languages.languages[lang_code];
+      config.order.map((lang_code) => {
+        const language = config.languages[lang_code];
         const languagePhrase = phrase[lang_code];
         const url = googleTranslateUrl(phrase.en, language.translate_code);
         const markdown = markdownUrl(languagePhrase, url)
@@ -37,4 +38,3 @@ const main = () => {
 };
 
 require.main === module && main();
-module.exports = main;

@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest test",
-    "readme": "node bin/readme.js",
-    "translate": "node bin/translate.js",
-    "add": "node bin/add.js",
-    "clear": "node bin/clear.js",
-    "study": "node bin/study.js",
-    "study-chinese": "node bin/study.js 5 zh"
+    "readme": "npx babel-node bin/readme.js",
+    "translate": "npx babel-node bin/translate.js",
+    "add": "npx babel-node bin/add.js",
+    "clear": "npx babel-node bin/clear.js",
+    "study": "npx babel-node bin/study.js",
+    "study-chinese": "npx babel-node bin/study.js 5 zh"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.1",
     "babel-jest": "^24.5.0"
   }
