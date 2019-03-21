@@ -1,4 +1,4 @@
-module.exports = {
+export const colors = {
   reset: "\x1b[0m",
   bright: "\x1b[1m",
   dim: "\x1b[2m",
@@ -29,3 +29,5 @@ module.exports = {
     crimson: "\x1b[48m"
   }
 };
+
+export default colors;

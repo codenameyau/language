@@ -1,18 +1,14 @@
-const readline = require('readline');
-const phrases = require('../phrases.json').phrases;
-const romanize = require('../src/romanize').romanize;
-const shuffle = require('../src/utils').shuffle;
-const languages = require('../languages').languages;
-const colors = require('../src/colors');
+import readline from 'readline';
+
+import { phrases } from '../phrases.json';
+import { matchRomanized, shuffle } from '../src/utils';
+import { colors } from '../src/colors';
+import config from '../config';
 
 // TODO: implement levishtein distance
-const match = (phrase, answer) => {
-  const cleanPhrase = romanize(phrase.toLowerCase());
-  const cleanAnswer = romanize(answer.toLowerCase());
-  return cleanPhrase === cleanAnswer;
-};
 
-const showResults = (questions) => {
+
+export const showResults = (questions) => {
   const correct = questions.reduce((acc, question) => {
     return acc += question.match;
   }, 0);
@@ -20,11 +16,11 @@ const showResults = (questions) => {
   const percent = correct / questions.length;
 
   console.log(`\n  ------------------`);
-  console.log(`  Correct! ${correct} / ${questions.length}`);
+  console.log(`  Score: ${correct} / ${questions.length}`);
   console.log(`  ------------------`);
 };
 
-const study = exports.study = (count = 1, language) => {
+export const study = (count = 1, language) => {
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -37,7 +33,7 @@ const study = exports.study = (count = 1, language) => {
       }).map((lang) => {
         return {
           lang: lang,
-          language: languages[lang].name,
+          language: config.languages[lang].name,
           phrase: phrase[lang],
           question: phrase.en
         }
@@ -60,7 +56,7 @@ const study = exports.study = (count = 1, language) => {
 
     reader.question(question, (answer) => {
       phrase.answer = answer;
-      phrase.match = match(phrase.phrase, answer);
+      phrase.match = matchRomanized(phrase.phrase, answer);
 
       if (phrase.match) {
         console.log(colors.fg.green, ` ✔️ ${phrase.phrase}`, colors.reset);

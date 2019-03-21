@@ -1,11 +1,11 @@
-exports.languages = {
+export const languages = {
   en: {
     name: 'English',
     api_code: 'en',
     translate_code: 'en',
     romanize: false,
   },
-  'zh': {
+  zh: {
     name: 'Chinese',
     api_code: 'zh-cn',
     translate_code: 'zh-CN',
@@ -25,8 +25,13 @@ exports.languages = {
   },
 };
 
-exports.order = [
+export const order = [
   'zh',
   'ja',
   'es',
 ]
+
+export default {
+  languages,
+  order
+};

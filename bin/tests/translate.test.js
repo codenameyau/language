@@ -1,4 +1,4 @@
-const parseRomization = require('../bin/translate').parseRomization;
+import { parseRomization } from '../translate';
 
 describe('parseRomization', () => {
   it('should parse romanization: zh', () => {

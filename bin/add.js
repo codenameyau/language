@@ -1,10 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const translateToLanguages = require('./translate').translateToLanguages;
-const phrases = require('../phrases.json');
+import fs from 'fs';
+import path from 'path';
+
+import translateToLanguages from './translate';
+import phrases from '../phrases.json';
+
 const PHRASES_PATH = path.resolve(__dirname) + '/../phrases.json';
 
-const reduceTranslations = exports.reduceTranslations = (phrase, translations) => {
+export const reduceTranslations = (phrase, translations) => {
   const newPhrase = translations.reduce((acc, translation) => {
     return {
       ...acc,
@@ -17,7 +19,7 @@ const reduceTranslations = exports.reduceTranslations = (phrase, translations) =
   return newPhrase;
 };
 
-const addPhrase = exports.addPhrase = (phrase) => {
+export const addPhrase = (phrase) => {
   return translateToLanguages(phrase).then((translations) => {
     const newPhrase = reduceTranslations(phrase, translations);
 

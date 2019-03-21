@@ -1,4 +1,4 @@
-const romanize = require('../src/romanize').romanize;
+import { romanize } from '../romanize';
 
 describe('romanize', () => {
   it('should romanize empty string', () => {
