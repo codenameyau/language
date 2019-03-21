@@ -22,11 +22,16 @@
     "url": "https://github.com/codenameyau/language/issues"
   },
   "homepage": "https://github.com/codenameyau/language#readme",
-  "dependencies": {
-    "@vitalets/google-translate-api": "^2.8.0"
-  },
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^2.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "babel-jest": "^24.5.0"
   }
 }

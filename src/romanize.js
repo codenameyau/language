@@ -1,15 +1,14 @@
-exports.romanize = (text) => {
+export const romanize = (text) => {
   let romanizedText = '';
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
-    const romanizedChar = exports.characters[char];
-    romanizedText += romanizedChar || char;
+    romanizedText += MAPPING[char] || char;
   }
 
   return romanizedText;
 };
 
-const characters = exports.characters = {
+export const MAPPING = {
   'Á': 'A',
   'Ă': 'A',
   'Ắ': 'A',
