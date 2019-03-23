@@ -1,7 +1,7 @@
 import readline from 'readline';
 
 import { phrases } from '../phrases.json';
-import { matchRomanized, shuffle } from '../src/utils';
+import { matchRomanized, shuffle, getGoogleTranslateLink } from '../src/utils';
 import { colors } from '../src/colors';
 import config from '../config';
 
@@ -16,9 +16,13 @@ export const study = (count = 1, language) => {
       Object.keys(phrase).filter((lang) => {
         return (lang !== 'en') && (!language || lang === language)
       }).map((lang) => {
+        const languageConfig = config.languages[lang];
+
         return {
           lang: lang,
-          language: config.languages[lang].name,
+          language: languageConfig.name,
+          link: getGoogleTranslateLink('en', languageConfig.translate_code, phrase.en),
+          translate_code: languageConfig.translate_code,
           phrase: phrase[lang],
           question: phrase.en
         }
@@ -36,17 +40,19 @@ export const study = (count = 1, language) => {
       return completeCB();
     }
 
-    const phrase = questions[index];
-    const question = `\n  [${phrase.language}] ${phrase.question} \n  > `;
+    const question = questions[index];
 
-    reader.question(question, (answer) => {
-      phrase.answer = answer;
-      phrase.match = matchRomanized(phrase.phrase, answer);
+    const questionFormatted =
+      `\n  [${question.language}] ${question.question} \n  > `;
 
-      if (phrase.match) {
-        console.log(colors.fg.green, ` ✔️ ${phrase.phrase}`, colors.reset);
+    reader.question(questionFormatted, (answer) => {
+      question.answer = answer;
+      question.match = matchRomanized(question.phrase, answer);
+
+      if (question.match) {
+        console.log(`${colors.fg.green}  ✔️ ${question.phrase} ${colors.reset}`);
       } else {
-        console.log(colors.fg.red, ` ❌ ${phrase.phrase}`, colors.reset);
+        console.log(`${colors.fg.red}  ❌ ${question.phrase} ${colors.reset}\n\n  ${question.link}\n`);
       }
 
       askQuestion(completeCB, index+1)
@@ -59,7 +65,7 @@ export const study = (count = 1, language) => {
 };
 
 const main = () => {
-  const count = Math.floor(process.argv[2]) || 1;
+  const count = Math.floor(process.argv[2]) || 3;
   const language = process.argv[3];
   study(count, language);
 };
