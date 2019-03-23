@@ -65,8 +65,8 @@ export const study = (count = 1, language) => {
 };
 
 const main = () => {
-  const count = Math.floor(process.argv[2]) || 3;
-  const language = process.argv[3];
+  const language = process.argv[2];
+  const count = Math.floor(process.argv[3]) || 3;
   study(count, language);
 };
 
