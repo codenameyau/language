@@ -1,6 +1,6 @@
 {
   "name": "language",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Learning languages one phrase at a time",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,14 @@
     "translate": "npx babel-node bin/translate.js",
     "add": "npx babel-node bin/add.js",
     "clear": "npx babel-node bin/clear.js",
+    "quiz": "npx babel-node bin/quiz.js",
     "study": "npx babel-node bin/study.js",
-    "study-chinese": "npx babel-node bin/study.js 5 zh"
+    "sc": "npx babel-node bin/study.js zh",
+    "sj": "npx babel-node bin/study.js ch",
+    "ss": "npx babel-node bin/study.js es",
+    "qc": "npx babel-node bin/quiz.js zh",
+    "qj": "npx babel-node bin/quiz.js ch",
+    "qs": "npx babel-node bin/quiz.js es"
   },
   "repository": {
     "type": "git",

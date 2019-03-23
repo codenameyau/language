@@ -26,3 +26,7 @@ export const matchRomanized = (stringA, stringB) => {
   const cleanStringB = romanize(stringB.toLowerCase());
   return cleanStringA === cleanStringB;
 };
+
+export const getGoogleTranslateLink = (sl="en", tl="zh-CN", text) => {
+  return `https://translate.google.com/#view=home&op=translate&sl=${sl}&tl=${tl}&text=${encodeURI(text)}`;
+};

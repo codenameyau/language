@@ -1,19 +1,25 @@
 {
   "extends": [
-    "plugin:react/recommended"
+    "eslint:recommended"
   ],
   "env": {
-    "browser": true,
-    "commonjs": true,
+    "browser": false,
+    "commonjs": false,
     "node": true,
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "no-console": "off",
     "no-unused-vars": "warn",
-    "curly": "off"
+    "no-undef": "error",
+    "curly": "warn",
+    "comma-dangle": "off"
   }
 }

@@ -5,6 +5,17 @@ import { matchRomanized, shuffle } from '../src/utils';
 import { colors } from '../src/colors';
 import config from '../config';
 
+
+export const showResults = (questions) => {
+  const correct = questions.reduce((acc, question) => {
+    return acc += question.match;
+  }, 0);
+
+  console.log(`\n  ------------------`);
+  console.log(`  Score: ${correct} / ${questions.length}`);
+  console.log(`  ------------------`);
+};
+
 export const study = (count = 1, language) => {
   const reader = readline.createInterface({
     input: process.stdin,
@@ -53,14 +64,20 @@ export const study = (count = 1, language) => {
     });
   };
 
+  reader.on('SIGINT', () => {
+    showResults(questions);
+    reader.close();
+  });
+
   askQuestion(() => {
+    showResults(questions);
     reader.close();
   }, 0);
 };
 
 const main = () => {
-  const count = Math.floor(process.argv[2]) || 1;
-  const language = process.argv[3];
+  const language = process.argv[2];
+  const count = Math.floor(process.argv[3]) || 3;
   study(count, language);
 };
 
