@@ -21,7 +21,7 @@ export const reduceTranslations = (phrase, translations) => {
 
 export const addPhrase = (phrase) => {
   return translateToLanguages(phrase).then((translations) => {
-    console.log(translations);
+    console.log(JSON.stringify(translations, null, 2));
 
     const newPhrase = reduceTranslations(phrase, translations);
 
