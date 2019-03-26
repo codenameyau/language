@@ -1,10 +1,16 @@
 {
   "phrases": [
     {
-      "en": "when is your birthday",
+      "en": "How much is it?",
+      "zh": "Duōshǎo qián?",
+      "ja": "Ikuradesu ka?",
+      "es": "¿Cuánto cuesta?"
+    },
+    {
+      "en": "When is your birthday",
       "zh": "Nǐ de shēngrì shì shénme shíhòu",
       "ja": "Anata no tanjōbi wa itsudesu ka",
-      "es": "cuando es tu cumpleaños"
+      "es": "Cuando es tu cumpleaños"
     },
     {
       "en": "Let's go to a restaurant tonight",

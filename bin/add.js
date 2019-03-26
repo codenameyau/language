@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import translateToLanguages from './translate';
+import { translateToLanguages } from './translate';
 import phrases from '../phrases.json';
 
 const PHRASES_PATH = path.resolve(__dirname) + '/../phrases.json';
@@ -21,6 +21,8 @@ export const reduceTranslations = (phrase, translations) => {
 
 export const addPhrase = (phrase) => {
   return translateToLanguages(phrase).then((translations) => {
+    console.log(translations);
+
     const newPhrase = reduceTranslations(phrase, translations);
 
     const newPhrases = {
