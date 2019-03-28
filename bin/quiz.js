@@ -55,9 +55,9 @@ export const study = (count = 1, language) => {
       phrase.match = matchRomanized(phrase.phrase, answer);
 
       if (phrase.match) {
-        console.log(colors.fg.green, ` ✔️ ${phrase.phrase}`, colors.reset);
+        console.log(colors.fg.green, `   ${phrase.phrase}`, colors.reset);
       } else {
-        console.log(colors.fg.red, ` ❌ ${phrase.phrase}`, colors.reset);
+        console.log(colors.fg.red, `   ${phrase.phrase}`, colors.reset);
       }
 
       askQuestion(completeCB, index+1)
