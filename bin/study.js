@@ -1,9 +1,18 @@
 import readline from 'readline';
 
 import { phrases } from '../phrases.json';
-import { matchRomanized, shuffle, getGoogleTranslateLink } from '../src/utils';
+import { romanize } from '../src/romanize';
+import { levenshtein } from '../src/levenshtein';
+import { shuffle, getGoogleTranslateLink } from '../src/utils';
 import { colors } from '../src/colors';
 import config from '../config';
+
+export const matchLevenshtein = (phrase, answer) => {
+  const cleanPhrase = romanize(phrase.toLowerCase());
+  const cleanAnswer = romanize(answer.toLowerCase());
+  const distance = levenshtein(cleanPhrase, cleanAnswer);
+  return distance < config.MARGIN_OF_ERROR;
+};
 
 export const study = (count = 1, language) => {
   const reader = readline.createInterface({
@@ -47,7 +56,7 @@ export const study = (count = 1, language) => {
 
     reader.question(questionFormatted, (answer) => {
       question.answer = answer;
-      question.match = matchRomanized(question.phrase, answer);
+      question.match = matchLevenshtein(question.phrase, answer);
 
       if (question.match) {
         console.log(`${colors.fg.green}    ️${question.phrase} ${colors.reset}`);

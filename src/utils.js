@@ -1,5 +1,3 @@
-import { romanize } from './romanize';
-
 export const randomInt = (min, max) => {
   return Math.min(Math.floor(Math.random() * max), max);
 };
@@ -19,12 +17,6 @@ export const shuffle = (array) => {
 
 export const match = (stringA, stringB) => {
   return stringA.toLowerCase() === stringB.toLowerCase();
-};
-
-export const matchRomanized = (stringA, stringB) => {
-  const cleanStringA = romanize(stringA.toLowerCase());
-  const cleanStringB = romanize(stringB.toLowerCase());
-  return cleanStringA === cleanStringB;
 };
 
 export const getGoogleTranslateLink = (sl="en", tl="zh-CN", text) => {

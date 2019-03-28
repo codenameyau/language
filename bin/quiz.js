@@ -1,10 +1,16 @@
 import readline from 'readline';
 
 import { phrases } from '../phrases.json';
-import { matchRomanized, shuffle } from '../src/utils';
+import { shuffle } from '../src/utils';
+import { romanize } from '../src/romanize';
 import { colors } from '../src/colors';
 import config from '../config';
 
+export const matchRomanized = (stringA, stringB) => {
+  const cleanStringA = romanize(stringA.toLowerCase());
+  const cleanStringB = romanize(stringB.toLowerCase());
+  return cleanStringA === cleanStringB;
+};
 
 export const showResults = (questions) => {
   const correct = questions.reduce((acc, question) => {
