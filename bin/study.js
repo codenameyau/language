@@ -11,7 +11,7 @@ export const matchLevenshtein = (phrase, answer) => {
   const cleanPhrase = romanize(phrase.toLowerCase());
   const cleanAnswer = romanize(answer.toLowerCase());
   const distance = levenshtein(cleanPhrase, cleanAnswer);
-  return distance < config.MARGIN_OF_ERROR;
+  return distance <= config.MARGIN_OF_ERROR;
 };
 
 export const study = (count = 1, language) => {
