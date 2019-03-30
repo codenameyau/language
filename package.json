@@ -12,11 +12,8 @@
     "quiz": "npx babel-node bin/quiz.js",
     "study": "npx babel-node bin/study.js",
     "sc": "npx babel-node bin/study.js zh",
-    "sj": "npx babel-node bin/study.js ch",
-    "ss": "npx babel-node bin/study.js es",
-    "qc": "npx babel-node bin/quiz.js zh",
-    "qj": "npx babel-node bin/quiz.js ch",
-    "qs": "npx babel-node bin/quiz.js es"
+    "sj": "npx babel-node bin/study.js ja",
+    "ss": "npx babel-node bin/study.js es"
   },
   "repository": {
     "type": "git",
