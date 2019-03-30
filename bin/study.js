@@ -14,7 +14,7 @@ export const matchLevenshtein = (phrase, answer) => {
   return distance <= config.MARGIN_OF_ERROR;
 };
 
-export const study = (count = 1, language) => {
+export const study = (language) => {
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -42,10 +42,10 @@ export const study = (count = 1, language) => {
       ...acc,
       ...otherQuestions
     ]
-  }, [])).slice(0, count);
+  }, []));
 
   const askQuestion = (completeCB, index) => {
-    if (index >= questions.length) {
+    if (index >= phrases.length) {
       return completeCB();
     }
 
@@ -75,8 +75,7 @@ export const study = (count = 1, language) => {
 
 const main = () => {
   const language = process.argv[2];
-  const count = Math.floor(process.argv[3]) || 3;
-  study(count, language);
+  study(language);
 };
 
 require.main === module && main();
