@@ -7,12 +7,24 @@ import { shuffle, getGoogleTranslateLink } from '../src/utils';
 import { colors } from '../src/colors';
 import config from '../config';
 
-export const matchLevenshtein = (phrase, answer) => {
+export function matchesLevenshtein(phrase, answer, marginOfError = 0) {
   const cleanPhrase = romanize(phrase.toLowerCase());
   const cleanAnswer = romanize(answer.toLowerCase());
   const distance = levenshtein(cleanPhrase, cleanAnswer);
-  return distance <= config.MARGIN_OF_ERROR;
-};
+  return distance <= marginOfError;
+}
+
+export function filterLanguage(questions, lang) {
+  return
+}
+
+export function createQuestions(questions, lang) {
+  return questions.map((question) => {
+    return {
+
+    }
+  });
+}
 
 export const study = (language) => {
   const reader = readline.createInterface({
@@ -56,7 +68,9 @@ export const study = (language) => {
 
     reader.question(questionFormatted, (answer) => {
       question.answer = answer;
-      question.match = matchLevenshtein(question.phrase, answer);
+      question.match = matchesLevenshtein(
+        question.phrase, answer, config.MARGIN_OF_ERROR
+      );
 
       if (question.match) {
         console.log(`${colors.fg.green}    ️${question.phrase} ${colors.reset}`);
