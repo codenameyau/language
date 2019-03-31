@@ -15,24 +15,11 @@ export function matchesLevenshtein(phrase, answer, marginOfError = 0) {
 }
 
 export function filterLanguage(questions, lang) {
-  return
+  return;
 }
 
-export function createQuestions(questions, lang) {
-  return questions.map((question) => {
-    return {
-
-    }
-  });
-}
-
-export const study = (language) => {
-  const reader = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  const questions = shuffle(phrases.reduce((acc, phrase) => {
+export function shuffleQuestions(phrases, language) {
+  return shuffle(phrases.reduce((acc, phrase) => {
     const otherQuestions = (
       Object.keys(phrase).filter((lang) => {
         return (lang !== 'en') && (!language || lang === language)
@@ -55,6 +42,15 @@ export const study = (language) => {
       ...otherQuestions
     ]
   }, []));
+}
+
+export const study = (language) => {
+  const reader = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  const questions = shuffleQuestions(phrases, language);
 
   const askQuestion = (completeCB, index) => {
     if (index >= phrases.length) {

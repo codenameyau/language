@@ -2,7 +2,7 @@ import { phrases } from './fixtures/phrases';
 import {
   matchesLevenshtein,
   filterLanguage,
-  createQuestions,
+  shuffleQuestions,
 } from '../study';
 
 describe('study', () => {
@@ -52,7 +52,7 @@ describe('study', () => {
 
   // });
 
-  // describe('createQuestions()', () => {
+  describe('shuffleQuestions()', () => {
 
-  // });
+  });
 });
