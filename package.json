@@ -11,9 +11,9 @@
     "clear": "npx babel-node bin/clear.js",
     "quiz": "npx babel-node bin/quiz.js",
     "study": "npx babel-node bin/study.js",
-    "sc": "npx babel-node bin/study.js zh",
-    "sj": "npx babel-node bin/study.js ja",
-    "ss": "npx babel-node bin/study.js es"
+    "sc": "npx babel-node bin/study.js zh 5",
+    "sj": "npx babel-node bin/study.js ja 5",
+    "ss": "npx babel-node bin/study.js es 5"
   },
   "repository": {
     "type": "git",
