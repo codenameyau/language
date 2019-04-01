@@ -46,7 +46,7 @@ export function prepareQuestions(phrases, language) {
   return questions;
 }
 
-export const study = (language) => {
+export const study = ({ language, count }) => {
   const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -55,7 +55,7 @@ export const study = (language) => {
   const questions = shuffle(prepareQuestions(phrases, language));
 
   const askQuestion = (completeCB, index) => {
-    if (index >= phrases.length) {
+    if ((index >= questions.length) || (index >= count)) {
       return completeCB();
     }
 
@@ -86,8 +86,10 @@ export const study = (language) => {
 };
 
 const main = () => {
+  // TODO: Replace arg index with arg parse.
   const language = process.argv[2];
-  study(language);
+  const count = process.argv[3];
+  study({ language, count });
 };
 
 require.main === module && main();
