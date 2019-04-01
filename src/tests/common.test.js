@@ -3,7 +3,7 @@ import {
   matchesLevenshtein,
   filterByLanguage,
   prepareQuestions,
-} from '../study';
+} from '../common';
 
 describe('study', () => {
   describe('matchesLevenshtein()', () => {

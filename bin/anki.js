@@ -36,7 +36,7 @@ export const study = ({ language, count }) => {
         console.log(`${colors.fg.red}    ${question.phrase} ${colors.reset}\n\n  ${question.link}\n`);
       }
 
-      askQuestion(completeCB, index+1)
+      askQuestion(completeCB, index + 1)
     });
   };
 

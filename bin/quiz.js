@@ -1,3 +1,4 @@
+// TODO: UPDATE FILE
 import readline from 'readline';
 
 import { phrases } from '../phrases.json';
