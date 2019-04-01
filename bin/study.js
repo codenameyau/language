@@ -14,34 +14,36 @@ export function matchesLevenshtein(phrase, answer, marginOfError = 0) {
   return distance <= marginOfError;
 }
 
-export function filterLanguage(questions, lang) {
-  return;
+export function filterByLanguage(phrase, language, baseLanguage = 'en') {
+  const filteredPhrase = Object.keys(phrase).filter((lang) => {
+    return (lang !== baseLanguage) && (!language || lang === language);
+  });
+
+  return filteredPhrase;
 }
 
-export function shuffleQuestions(phrases, language) {
-  return shuffle(phrases.reduce((acc, phrase) => {
-    const otherQuestions = (
-      Object.keys(phrase).filter((lang) => {
-        return (lang !== 'en') && (!language || lang === language)
-      }).map((lang) => {
-        const languageConfig = config.languages[lang];
+export function prepareQuestions(phrases, language) {
+  const questions = phrases.reduce((acc, phrase) => {
+    const otherQuestions = filterByLanguage(phrase, language).map((lang) => {
+      const languageConfig = config.languages[lang];
 
-        return {
-          lang: lang,
-          language: languageConfig.name,
-          link: getGoogleTranslateLink('en', languageConfig.translate_code, phrase.en),
-          translate_code: languageConfig.translate_code,
-          phrase: phrase[lang],
-          question: phrase.en
-        }
-      })
-    );
+      return {
+        lang: lang,
+        language: languageConfig.name,
+        link: getGoogleTranslateLink('en', languageConfig.translate_code, phrase.en),
+        translate_code: languageConfig.translate_code,
+        phrase: phrase[lang],
+        question: phrase.en
+      }
+    });
 
     return [
       ...acc,
       ...otherQuestions
     ]
-  }, []));
+  }, []);
+
+  return questions;
 }
 
 export const study = (language) => {
@@ -50,7 +52,7 @@ export const study = (language) => {
     output: process.stdout
   });
 
-  const questions = shuffleQuestions(phrases, language);
+  const questions = shuffle(prepareQuestions(phrases, language));
 
   const askQuestion = (completeCB, index) => {
     if (index >= phrases.length) {

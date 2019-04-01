@@ -2,15 +2,12 @@ export const phrases = {
   "phrases": [
     {
       "en": "How much is it?",
-      "zh": "Duōshǎo qián?",
-      "ja": "Ikuradesu ka?",
-      "es": "¿Cuánto cuesta?"
+      "zh": "Duōshǎo qián?"
     },
     {
       "en": "When is your birthday",
       "zh": "Nǐ de shēngrì shì shénme shíhòu",
-      "ja": "Anata no tanjōbi wa itsudesu ka",
-      "es": "Cuando es tu cumpleaños"
+      "ja": "Anata no tanjōbi wa itsudesu ka"
     },
     {
       "en": "Let's go to a restaurant tonight",
